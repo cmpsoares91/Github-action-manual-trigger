@@ -6,6 +6,11 @@ name: CI
 on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+    inputs:
+      versionLevel:
+        description: 'Semantic Version Level'     
+        required: true
+        default: 'patch'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -28,3 +33,4 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          echo "version level is: ${{ github.event.inputs.versionLevel }}
