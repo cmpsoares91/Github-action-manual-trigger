@@ -33,4 +33,4 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          echo "version level is: ${{ github.event.inputs.versionLevel }}
+          echo "version level is: ${{ github.event.inputs.versionLevel }}"
