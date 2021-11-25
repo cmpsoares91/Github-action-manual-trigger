@@ -11,6 +11,14 @@ on:
         description: 'Semantic Version Level'     
         required: true
         default: 'patch'
+      versionLevel2:
+        type: choice
+        description: 'Semantic Version Level 2'
+        required: true
+        options: 
+          - patch
+          - minor
+          - major
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -34,3 +42,4 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           echo "version level is: ${{ github.event.inputs.versionLevel }}"
+          echo "version level 2 is: ${{ github.event.inputs.versionLevel2 }}"
